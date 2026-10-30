@@ -23,21 +23,21 @@
 .study-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 31px; border-block: 1px solid var(--line); }
 .study-facts > div { display: flex; flex-direction: column; gap: 8px; min-height: 83px; padding: 16px 20px 16px 0; }
 .study-facts > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
-.study-facts span, .diagnostic-pair span { color: var(--muted); font-family: var(--mono); font-size: 8px; letter-spacing: .1em; }
-.study-facts strong { color: var(--ink); font-size: 11px; font-weight: 500; line-height: 1.5; }
+.study-facts span, .diagnostic-pair span { color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; }
+.study-facts strong { color: var(--ink); font-size: 12px; font-weight: 500; line-height: 1.5; }
 .study-columns { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 70px); }
 .study-columns section { min-width: 0; }
 .study-columns h3 { margin: 0 0 11px; color: var(--teal); font-family: var(--mono); font-size: 9px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
-.study-columns p { margin: 0 0 12px; color: var(--ink-soft); font-size: 12px; line-height: 1.75; }
+.study-columns p { margin: 0 0 12px; color: var(--ink-soft); font-size: 13px; line-height: 1.75; }
 .study-columns .inline-link { margin-top: 3px; }
 .study-results { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .study-results li { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; padding: 12px 14px; background: var(--paper-deep); }
-.study-results li > span { color: var(--ink-soft); font-size: 10px; }
-.study-results li > strong { color: var(--teal); font-family: var(--mono); font-size: 10px; font-weight: 500; text-align: right; }
+.study-results li > span { color: var(--ink-soft); font-size: 11px; }
+.study-results li > strong { color: var(--teal); font-family: var(--mono); font-size: 11px; font-weight: 500; text-align: right; }
 .study-results li > small { grid-column: 1 / -1; color: var(--muted); font-size: 10px; line-height: 1.55; }
 .study-caveat { display: grid; grid-template-columns: 145px 1fr; gap: 20px; margin-top: 25px; padding: 16px 18px; border-left: 2px solid var(--coral); background: rgba(232, 224, 209, .5); }
 .study-caveat strong { color: var(--coral); font-family: var(--mono); font-size: 9px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
-.study-caveat p { margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.7; }
+.study-caveat p { margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.7; }
 .study-card > .tag-list { margin-top: 20px; }
 .tradeoff-figure { margin: 15px 0 14px; padding: 13px 15px 12px; background: var(--teal-dark); color: var(--paper); }
 .tradeoff-figure svg { display: block; width: 100%; height: auto; }
