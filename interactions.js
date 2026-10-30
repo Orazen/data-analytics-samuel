@@ -1,4 +1,26 @@
 (() => {
+  const heroAnimation = document.querySelector("[data-animated-src]");
+  const motionToggle = document.querySelector("[data-motion-toggle]");
+
+  if (heroAnimation && motionToggle) {
+    const animatedSrc = heroAnimation.dataset.animatedSrc;
+    const posterSrc = heroAnimation.dataset.posterSrc;
+    let paused = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const renderMotionState = () => {
+      heroAnimation.src = paused ? posterSrc : animatedSrc;
+      motionToggle.textContent = paused ? "Play animation" : "Pause animation";
+      motionToggle.setAttribute("aria-label", `${paused ? "Play" : "Pause"} data science animation`);
+      motionToggle.setAttribute("aria-pressed", String(paused));
+    };
+
+    renderMotionState();
+    motionToggle.addEventListener("click", () => {
+      paused = !paused;
+      renderMotionState();
+    });
+  }
+
   const controls = document.querySelector("[data-project-controls]");
   const cards = Array.from(document.querySelectorAll("[data-work-card]"));
   const buttons = Array.from(document.querySelectorAll("[data-project-filter]"));

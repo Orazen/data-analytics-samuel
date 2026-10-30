@@ -63,59 +63,26 @@
           </div>
         </div>
 
-        <div class="hero-visual">
+        <figure class="hero-visual" aria-labelledby="hero-visual-caption">
           <div class="visual-topline">
-            <span>RESEARCH PROFILE</span>
-            <span>CLUSTERWISE REGRESSION</span>
+            <span>ANALYTICS APP WALKTHROUGH</span>
+            <button class="visual-motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pause animation</button>
           </div>
-          <svg class="cluster-art" viewBox="0 0 660 470" role="img" aria-labelledby="cluster-title cluster-desc">
-            <title id="cluster-title">Illustrative cluster map</title>
-            <desc id="cluster-desc">A stylized diagram of data points arranged into two groups, inspired by Samuel's master's thesis on clusterwise regression.</desc>
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d9e4d7" stroke-opacity=".12" stroke-width="1" />
-              </pattern>
-              <radialGradient id="glow" cx="50%" cy="45%" r="65%">
-                <stop offset="0" stop-color="#1b7770" stop-opacity=".36" />
-                <stop offset="1" stop-color="#092e32" stop-opacity="0" />
-              </radialGradient>
-            </defs>
-            <rect width="660" height="470" rx="4" fill="#092e32" />
-            <rect width="660" height="470" rx="4" fill="url(#grid)" />
-            <ellipse cx="330" cy="226" rx="258" ry="194" fill="url(#glow)" />
-            <path class="cluster-route" d="M74 272 C145 200 206 132 299 160 C374 184 423 290 583 236" fill="none" stroke="#71c5b1" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="5 8" />
-            <ellipse cx="214" cy="211" rx="115" ry="94" fill="none" stroke="#7dc8b5" stroke-opacity=".46" stroke-width="1.3" stroke-dasharray="4 7" />
-            <ellipse cx="450" cy="252" rx="122" ry="105" fill="none" stroke="#e28a68" stroke-opacity=".6" stroke-width="1.3" stroke-dasharray="4 7" />
-            <g class="cluster-points cluster-points-a" fill="#a9e3cf">
-              <circle cx="138" cy="214" r="4" /><circle cx="171" cy="179" r="3" /><circle cx="189" cy="237" r="4" /><circle cx="213" cy="153" r="3" />
-              <circle cx="229" cy="205" r="5" /><circle cx="247" cy="268" r="3" /><circle cx="263" cy="184" r="3" /><circle cx="290" cy="230" r="4" />
-              <circle cx="176" cy="289" r="3" /><circle cx="115" cy="256" r="2.5" /><circle cx="272" cy="301" r="2.5" /><circle cx="316" cy="179" r="2.5" />
-            </g>
-            <g class="cluster-points cluster-points-b" fill="#f0a07a">
-              <circle cx="367" cy="261" r="4" /><circle cx="399" cy="197" r="3" /><circle cx="420" cy="306" r="4" /><circle cx="438" cy="236" r="5" />
-              <circle cx="463" cy="176" r="3" /><circle cx="477" cy="273" r="4" /><circle cx="503" cy="219" r="3" /><circle cx="524" cy="301" r="3" />
-              <circle cx="551" cy="249" r="4" /><circle cx="390" cy="327" r="2.5" /><circle cx="487" cy="337" r="2.5" /><circle cx="561" cy="191" r="2.5" />
-            </g>
-            <g stroke="#d7e4da" stroke-opacity=".45" stroke-width="1">
-              <path d="M80 389H584" /><path d="M80 389V83" />
-            </g>
-            <g fill="#bdd1c8" font-family="'DM Mono', monospace" font-size="11" letter-spacing="1.4">
-              <text x="81" y="414">SPATIAL OBSERVATIONS</text>
-              <text x="34" y="105" transform="rotate(-90 34 105)">EMISSIONS</text>
-              <text x="108" y="112">GROUP A</text>
-              <text x="480" y="138">GROUP B</text>
-            </g>
-            <g>
-              <rect x="476" y="46" width="112" height="39" rx="2" fill="#f3f1e9" />
-              <text x="490" y="62" fill="#61726d" font-family="'DM Mono', monospace" font-size="9" letter-spacing="1">SELECTED MODEL</text>
-              <text x="490" y="77" fill="#103f40" font-family="'Public Sans', sans-serif" font-size="13" font-weight="700">K = 2</text>
-            </g>
-          </svg>
-          <div class="visual-footline">
-            <span>ILLUSTRATIVE METHOD DIAGRAM</span>
-            <span>CO₂ · PM2.5 · PM10</span>
-          </div>
-        </div>
+          <img
+            class="hero-animation"
+            src="/assets/data-science-hero.gif"
+            data-animated-src="/assets/data-science-hero.gif"
+            data-poster-src="/assets/data-science-poster.jpg"
+            width="960"
+            height="540"
+            alt="Animated reference preview of a stock analysis dashboard in a code environment, from Business Science."
+            fetchpriority="high"
+          />
+          <figcaption class="visual-footline" id="hero-visual-caption">
+            <span>REFERENCE VISUAL · <a href="https://mattdancho.netlify.app/" target="_blank" rel="noreferrer">BUSINESS SCIENCE ↗</a></span>
+            <span>STOCK ANALYZER UI</span>
+          </figcaption>
+        </figure>
       </section>
 
       <section class="signal-strip page-shell" aria-label="Thesis at a glance">
