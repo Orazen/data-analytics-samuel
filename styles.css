@@ -77,18 +77,26 @@ h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: -0.055em
 .hero-role span { padding-inline: 4px; color: #a8afa4; }
 .hero-intro { max-width: 455px; margin-bottom: 27px; color: var(--ink-soft); font-size: 16px; line-height: 1.8; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
+.hero-platforms { display: flex; flex-wrap: wrap; gap: 10px 21px; margin-top: 23px; }
+.hero-platforms a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-soft); font-family: var(--mono); font-size: 9px; letter-spacing: .04em; text-decoration: none; transition: color 160ms ease; }
+.hero-platforms a:hover { color: var(--teal); }
+.platform-icon { display: grid; place-items: center; width: 22px; height: 22px; border: 1px solid var(--line); border-radius: 50%; color: var(--teal); font-size: 9px; font-weight: 500; }
+.platform-arrow { color: var(--coral); font-size: 11px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 15px; min-height: 47px; padding: 0 18px; font-size: 12px; font-weight: 600; text-decoration: none; transition: transform 180ms ease, background 180ms ease, color 180ms ease; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--teal-dark); color: var(--paper); }
 .button-primary:hover { background: var(--teal); }
 .button-text { padding-inline: 2px; color: var(--ink); }
 .button-text span { color: var(--coral); font-size: 16px; }
-.hero-meta { display: flex; align-items: flex-start; gap: 12px; max-width: 470px; margin-top: 49px; color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: 0.035em; line-height: 1.7; }
+.hero-meta { display: flex; align-items: flex-start; gap: 12px; max-width: 470px; margin-top: 31px; color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: 0.035em; line-height: 1.7; }
 .meta-rule { flex: 0 0 24px; height: 1px; margin-top: 8px; background: var(--coral); }
 .hero-visual { position: relative; padding: 16px; background: var(--teal-dark); color: var(--paper); box-shadow: 16px 16px 0 rgba(17, 126, 117, 0.12); animation: rise-in 700ms 100ms both; }
 .visual-topline, .visual-footline { display: flex; justify-content: space-between; gap: 12px; color: #bdd1c8; font-size: 9px; }
 .visual-topline { padding: 4px 4px 13px; }
 .cluster-art { display: block; width: 100%; height: auto; }
+.cluster-route { animation: route-travel 18s linear infinite; }
+.cluster-points { transform-box: fill-box; transform-origin: center; animation: data-pulse 5.5s ease-in-out infinite; }
+.cluster-points-b { animation-delay: -2.75s; }
 .visual-footline { padding: 13px 4px 2px; color: #a8c0b6; font-size: 8px; }
 .visual-index { position: absolute; right: -39px; bottom: 28px; color: var(--coral); font-family: var(--display); font-size: 31px; font-style: italic; }
 .hero-side-note { position: absolute; right: -36px; top: 45%; color: var(--muted); font-family: var(--mono); font-size: 8px; letter-spacing: 0.12em; line-height: 1.8; writing-mode: vertical-rl; transform: rotate(180deg); }
@@ -237,6 +245,8 @@ h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: -0.055em
 .footer-brand span { color: var(--coral); }
 
 @keyframes rise-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes route-travel { to { stroke-dashoffset: -130; } }
+@keyframes data-pulse { 0%, 100% { opacity: .78; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
@@ -334,4 +344,8 @@ h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: -0.055em
   .contact-email { font-size: 12px; }
   .site-footer { flex-wrap: wrap; justify-content: space-between; min-height: 72px; padding-block: 15px; font-size: 7px; }
   .footer-brand { flex-basis: 100%; }
+}
+
+@media (max-width: 390px) {
+  .hero h1 { font-size: clamp(44px, 13vw, 56px); }
 }
