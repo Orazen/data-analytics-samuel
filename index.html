@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f3f1e9" />
-    <meta name="description" content="Samuel Hinn Lionel Katam's data science portfolio: clustering, predictive modeling, and spatial data analysis." />
+    <meta name="description" content="Samuel Hinn Lionel Katam's portfolio: two data science theses and five project reports in clustering, statistics, psychometrics, and applied analysis." />
     <meta property="og:title" content="Samuel Hinn Lionel Katam — Data Scientist" />
-    <meta property="og:description" content="Selected data science projects in clustering, predictive modeling, and spatial analysis." />
+    <meta property="og:description" content="Two theses and five data science project reports by Samuel Hinn Lionel Katam." />
     <meta property="og:type" content="website" />
     <title>Samuel Hinn Lionel Katam — Data Scientist</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -24,7 +24,7 @@
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#projects">Portfolio projects</a>
+        <a href="#projects">Theses &amp; assignments</a>
         <a href="#education">Education</a>
         <a href="#training">Training</a>
         <a href="#contact">Contact</a>
@@ -34,7 +34,7 @@
         <summary aria-label="Open navigation menu"><span></span><span></span></summary>
         <nav aria-label="Mobile navigation">
           <a href="#about">About</a>
-          <a href="#projects">Portfolio projects</a>
+          <a href="#projects">Theses &amp; assignments</a>
           <a href="#education">Education</a>
           <a href="#training">Training</a>
           <a href="#contact">Contact</a>
@@ -136,17 +136,31 @@
       </section>
 
       <section class="content-section projects-section page-shell" id="projects" aria-labelledby="projects-title">
-        <div class="section-index"><span>02</span><span class="index-line"></span><span>PORTFOLIO PROJECTS</span></div>
+        <div class="section-index"><span>02</span><span class="index-line"></span><span>THESIS &amp; ASSIGNMENTS</span></div>
         <div class="section-body">
           <div class="section-heading-row">
             <div>
               <p class="eyebrow">SELECTED ACADEMIC WORK</p>
               <h2 id="projects-title">Questions first.<br /><em>Evidence follows.</em></h2>
             </div>
-            <p class="section-aside">Research across clustering, statistical inference, functional data, psychometrics, and business analysis.</p>
+            <p class="section-aside">Two degree theses and five project reports across clustering, statistics, psychometrics, and applied analysis.</p>
           </div>
 
-          <article class="project-card project-featured">
+          <div class="project-controls" data-project-controls hidden>
+            <div class="project-filter" role="group" aria-label="Filter theses and assignments">
+              <button type="button" class="is-active" data-project-filter="all" aria-controls="portfolio-work" aria-pressed="true">All work <span>7</span></button>
+              <button type="button" data-project-filter="thesis" aria-controls="portfolio-work" aria-pressed="false">Theses <span>2</span></button>
+              <button type="button" data-project-filter="assignment" aria-controls="portfolio-work" aria-pressed="false">Assignments <span>5</span></button>
+            </div>
+            <label class="project-search" for="project-search">
+              <span>Find by topic or method</span>
+              <input id="project-search" type="search" placeholder="Try “regression” or “R”" autocomplete="off" />
+            </label>
+          </div>
+          <p class="project-results" id="project-results" aria-live="polite" aria-atomic="true" hidden>7 projects · use the filters to explore</p>
+
+          <div class="portfolio-work" id="portfolio-work">
+          <article class="project-card project-featured" data-work-card data-work-kind="thesis">
             <div class="project-card-main">
               <div class="project-meta"><span>MASTER’S THESIS</span><span>2025–2026</span><span>R</span></div>
               <h3>Hierarchical Clusterwise Regression on Italian Emissions Data</h3>
@@ -164,6 +178,7 @@
               </div>
               <div class="project-result"><span class="result-mark">↗</span><p>Evaluated held-out predictions with RSS and RMSE; created maps, elbow plots, and observed-versus-predicted figures in R.</p></div>
               <div class="tag-list" aria-label="Project skills and tools"><span>Hierarchical clustering</span><span>Cluster-specific regression</span><span>Spatial analysis</span><span>R · ggplot2 · sf</span></div>
+              <a class="inline-link thesis-detail-link" href="/projects.html#masters-thesis">Explore the thesis workflow <span aria-hidden="true">↗</span></a>
             </div>
             <aside class="project-card-aside" aria-label="Model selection summary">
               <div class="aside-label">VALIDATION SWEEP</div>
@@ -186,16 +201,16 @@
           </article>
 
           <div class="project-grid" aria-label="More portfolio projects">
-            <article class="project-tile">
+            <article class="project-tile" data-work-card data-work-kind="thesis">
               <div class="project-tile-top"><span class="project-tile-number">02</span><span class="project-tile-mark" aria-hidden="true">DB<br />/ K</span></div>
               <div class="project-meta"><span>BACHELOR’S THESIS</span><span>2023</span></div>
               <h3>Density-Based vs. Centroid-Based Clustering</h3>
               <p>Compared two clustering families and explored how their different assumptions shape results on real datasets.</p>
               <div class="tag-list"><span>Clustering</span><span>Method comparison</span></div>
-              <a class="project-tile-link" href="#education">Education &amp; experience <span aria-hidden="true">↗</span></a>
+              <a class="project-tile-link" href="/projects.html#bachelors-thesis">Explore the thesis scope <span aria-hidden="true">↗</span></a>
             </article>
 
-            <article class="project-tile">
+            <article class="project-tile" data-work-card data-work-kind="assignment">
               <div class="project-tile-top"><span class="project-tile-number">03</span><span class="project-tile-mark" aria-hidden="true">H₀</span></div>
               <div class="project-meta"><span>STATISTICAL METHODS</span><span>R</span></div>
               <h3>Experimental Research Design</h3>
@@ -204,7 +219,7 @@
               <a class="project-tile-link" href="/projects.html#experimental-design">Read the case study <span aria-hidden="true">↗</span></a>
             </article>
 
-            <article class="project-tile">
+            <article class="project-tile" data-work-card data-work-kind="assignment">
               <div class="project-tile-top"><span class="project-tile-number">04</span><span class="project-tile-mark" aria-hidden="true">80<br /><small>CURVES</small></span></div>
               <div class="project-meta"><span>SIMULATION STUDY</span><span>R</span></div>
               <h3>Smoothing Simulated Functional Data</h3>
@@ -213,7 +228,7 @@
               <a class="project-tile-link" href="/projects.html#functional-data">Read the case study <span aria-hidden="true">↗</span></a>
             </article>
 
-            <article class="project-tile">
+            <article class="project-tile" data-work-card data-work-kind="assignment">
               <div class="project-tile-top"><span class="project-tile-number">05</span><span class="project-tile-mark" aria-hidden="true">n =<br />198</span></div>
               <div class="project-meta"><span>BOOTSTRAP INFERENCE</span><span>2022</span></div>
               <h3>Memory-Test Data: Intervals &amp; Tests</h3>
@@ -222,7 +237,7 @@
               <a class="project-tile-link" href="/projects.html#memory-inference">Read the case study <span aria-hidden="true">↗</span></a>
             </article>
 
-            <article class="project-tile">
+            <article class="project-tile" data-work-card data-work-kind="assignment">
               <div class="project-tile-top"><span class="project-tile-number">06</span><span class="project-tile-mark" aria-hidden="true">26<br /><small>ITEMS</small></span></div>
               <div class="project-meta"><span>EXPLORATORY PSYCHOMETRICS</span><span>R</span></div>
               <h3>Structure in Big Five Survey Items</h3>
@@ -231,7 +246,7 @@
               <a class="project-tile-link" href="/projects.html#psychometrics">Read the case study <span aria-hidden="true">↗</span></a>
             </article>
 
-            <article class="project-tile">
+            <article class="project-tile" data-work-card data-work-kind="assignment">
               <div class="project-tile-top"><span class="project-tile-number">07</span><span class="project-tile-mark" aria-hidden="true">9,994<br /><small>TRANSACTIONS</small></span></div>
               <div class="project-meta"><span>EXPLORATORY DATA ANALYSIS</span><span>R</span></div>
               <h3>Superstore Sales, Shipping &amp; Profit</h3>
@@ -241,7 +256,8 @@
             </article>
           </div>
 
-          <p class="projects-note">Open a case study for its data source, methods, reported results, and scope notes.</p>
+          <p class="projects-note">Filter by thesis or assignment, or search for a topic. Open a report for methods and scope notes.</p>
+          </div>
         </div>
       </section>
 
@@ -314,6 +330,7 @@
           </div>
           <div class="contact-details">
             <a class="contact-email" href="mailto:lionelsamuelhinn@gmail.com">lionelsamuelhinn@gmail.com <span aria-hidden="true">↗</span></a>
+            <a class="contact-link" href="tel:+393756366066">+39 375 636 6066 <span aria-hidden="true">↗</span></a>
             <a class="contact-link" href="https://www.linkedin.com/in/samuel-hinn-lionel-katam/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
             <div class="cv-links">
               <a href="/cv/Samuel_Katam_Data_Scientist_EN.pdf" download>CV · English <span aria-hidden="true">↓</span></a>
@@ -330,5 +347,6 @@
       <span>© 2026 · PORTFOLIO</span>
       <a href="#top">BACK TO TOP ↑</a>
     </footer>
+    <script src="/interactions.js" defer></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 # Samuel Hinn Lionel Katam
 
-**Live portfolio:** [samuel-hinn-lionel-katam.vercel.app](https://samuel-hinn-lionel-katam.vercel.app/)
+**Live portfolio:** [samuelkatam.vercel.app](https://samuelkatam.vercel.app/)
 
 **Data Scientist | Clustering & Predictive Modeling**  
-Caserta, Italy · [Email](mailto:lionelsamuelhinn@gmail.com) · [LinkedIn](https://www.linkedin.com/in/samuel-hinn-lionel-katam/) · CV: [English](cv/Samuel_Katam_Data_Scientist_EN.pdf) | [Italiano](cv/Samuel_Katam_Data_Scientist_IT.pdf)
+Caserta, Italy · +39 375 636 6066 · [Email](mailto:lionelsamuelhinn@gmail.com) · [LinkedIn](https://www.linkedin.com/in/samuel-hinn-lionel-katam/) · CV: [English](cv/Samuel_Katam_Data_Scientist_EN.pdf) | [Italiano](cv/Samuel_Katam_Data_Scientist_IT.pdf)
 
 ## Profile
 
@@ -22,6 +22,8 @@ Data Science MSc graduate with applied research experience in hierarchical clust
 
 *Master's thesis · 2025–2026 · R*
 
+See the [full thesis workflow](projects.html#masters-thesis).
+
 - Analysed spatially referenced 2021 municipal data for CO₂, PM2.5, and PM10, normalised by area.
 - Developed a hierarchical clusterwise regression workflow that iteratively merged 106 initial province-based groups using a regression residual-sum-of-squares criterion.
 - Fit cluster-specific ordinary least squares models and assigned validation and test observations to training clusters using nearest neighbours.
@@ -31,6 +33,8 @@ Data Science MSc graduate with applied research experience in hierarchical clust
 ### Density-Based vs. Centroid-Based Clustering
 
 *Bachelor's thesis · 2023*
+
+See the [thesis scope](projects.html#bachelors-thesis).
 
 Compared density-based and centroid-based clustering approaches and their applications to real datasets.
 
@@ -64,7 +68,7 @@ Explored 26 public personality-survey items with KMO and Bartlett diagnostics, p
 
 Visualized 9,994 sample transactions across customer, regional, shipping, and product dimensions. The [case study](projects.html#superstore) identifies report-reported summary statistics and notes they have not been independently recalculated.
 
-Additional methods and scope notes for these projects are available in the [project case studies](projects.html). The HTML source exports were reviewed statically; their embedded scripts and row-level records were not republished.
+Additional methods and scope notes for all seven projects are available in the [thesis and assignment index](projects.html). The homepage includes filters by work type and a search by topic or method. The HTML source exports were reviewed statically; their embedded scripts and row-level records were not republished.
 
 ## Experience
 
@@ -88,6 +92,7 @@ Introduced statistics and data visualisation in RStudio to students aged 14–19
 ## Contact
 
 - **Email:** [lionelsamuelhinn@gmail.com](mailto:lionelsamuelhinn@gmail.com)
+- **Phone:** [+39 375 636 6066](tel:+393756366066)
 - **LinkedIn:** [samuel-hinn-lionel-katam](https://www.linkedin.com/in/samuel-hinn-lionel-katam/)
 
 ## CV Downloads

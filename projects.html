@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f3f1e9" />
-    <meta name="description" content="Research and analytics case studies by Samuel Hinn Lionel Katam, covering statistical inference, functional data, psychometrics, and retail data." />
-    <meta property="og:title" content="Project Case Studies — Samuel Hinn Lionel Katam" />
-    <meta property="og:description" content="Methods, results, and scope notes from five data analysis projects." />
+    <meta name="description" content="Two thesis summaries and five project reports by Samuel Hinn Lionel Katam, including methods, results, and scope notes." />
+    <meta property="og:title" content="Theses & Project Reports — Samuel Hinn Lionel Katam" />
+    <meta property="og:description" content="Methods, results, and scope notes from two theses and five project reports." />
     <meta property="og:type" content="website" />
-    <title>Project Case Studies — Samuel Hinn Lionel Katam</title>
+    <title>Theses &amp; Project Reports — Samuel Hinn Lionel Katam</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="/#about">About</a>
-        <a href="/#projects" aria-current="page">Portfolio projects</a>
+        <a href="/#projects" aria-current="page">Theses &amp; assignments</a>
         <a href="/#education">Education</a>
         <a href="/#contact">Contact</a>
       </nav>
@@ -34,7 +34,7 @@
         <summary aria-label="Open navigation menu"><span></span><span></span></summary>
         <nav aria-label="Mobile navigation">
           <a href="/#about">About</a>
-          <a href="/#projects">Portfolio projects</a>
+          <a href="/#projects">Theses &amp; assignments</a>
           <a href="/#education">Education</a>
           <a href="/#contact">Contact</a>
         </nav>
@@ -45,20 +45,80 @@
       <section class="study-intro page-shell" aria-labelledby="page-title">
         <a class="study-back" href="/#projects"><span aria-hidden="true">←</span> BACK TO PORTFOLIO</a>
         <p class="eyebrow"><span class="eyebrow-dot"></span> PROJECT NOTES <span class="eyebrow-separator">/</span> METHODS &amp; EVIDENCE</p>
-        <h1 id="page-title">Five questions.<br /><em>Five ways into the data.</em></h1>
-        <p class="study-intro-copy">Case studies from statistical coursework and exploratory analysis. Each summary describes what the supplied report shows and where its conclusions need care.</p>
-        <nav class="study-index" aria-label="Project case studies">
-          <a href="#experimental-design"><span>01</span> Experimental design</a>
-          <a href="#functional-data"><span>02</span> Functional data</a>
-          <a href="#memory-inference"><span>03</span> Bootstrap inference</a>
-          <a href="#psychometrics"><span>04</span> Psychometrics</a>
-          <a href="#superstore"><span>05</span> Superstore analysis</a>
+        <h1 id="page-title">Two theses.<br /><em>Five project reports.</em></h1>
+        <p class="study-intro-copy">A complete index of Samuel’s academic work: thesis methods, assignment findings, data sources, and the limits behind each conclusion.</p>
+        <nav class="study-index" aria-label="Theses and project report contents">
+          <a href="#masters-thesis"><span>01</span> Master’s thesis</a>
+          <a href="#bachelors-thesis"><span>02</span> Bachelor’s thesis</a>
+          <a href="#experimental-design"><span>03</span> Research design</a>
+          <a href="#functional-data"><span>04</span> Functional data</a>
+          <a href="#memory-inference"><span>05</span> Bootstrap inference</a>
+          <a href="#psychometrics"><span>06</span> Psychometrics</a>
+          <a href="#superstore"><span>07</span> Superstore analysis</a>
         </nav>
       </section>
 
+      <div class="study-list thesis-list page-shell">
+        <p class="eyebrow study-section-label">THESIS WORK</p>
+        <article class="study-card" id="masters-thesis">
+          <div class="study-card-index"><span>THESIS 01 · MASTER’S</span><span>2025–2026 · R</span></div>
+          <header class="study-card-heading">
+            <h2>Hierarchical Clusterwise Regression on Italian Emissions Data</h2>
+            <p>Can regional groupings improve regression when municipal pollution measurements vary across Italy?</p>
+          </header>
+          <div class="study-facts">
+            <div><span>DATA</span><strong>2021 municipal CO₂, PM2.5, and PM10</strong></div>
+            <div><span>STARTING GROUPS</span><strong>106 province-based groups</strong></div>
+            <div><span>SELECTED MODEL</span><strong>K = 2 by validation RSS</strong></div>
+          </div>
+          <div class="study-columns">
+            <section>
+              <h3>Method</h3>
+              <p>The thesis develops a hierarchical clusterwise regression workflow. It starts with 106 province-based groups, then iteratively merges groups using a regression residual-sum-of-squares criterion.</p>
+              <p>After area normalisation, Samuel fits cluster-specific ordinary least squares models for spatially referenced municipal pollutant data.</p>
+            </section>
+            <section>
+              <h3>Validation and outputs</h3>
+              <p>Validation and test observations are assigned to training clusters with a nearest-neighbour method. Candidate cluster counts K = 2–25 are compared on validation RSS, with K = 2 selected.</p>
+              <p>Held-out predictions are evaluated with RSS and RMSE. The R workflow produces maps, elbow plots, and observed-versus-predicted figures using ggplot2 and sf.</p>
+            </section>
+          </div>
+          <div class="tag-list"><span>Hierarchical clustering</span><span>Clusterwise regression</span><span>Spatial analysis</span><span>Nearest neighbours</span><span>RSS · RMSE</span></div>
+        </article>
+
+        <article class="study-card" id="bachelors-thesis">
+          <div class="study-card-index"><span>THESIS 02 · BACHELOR’S</span><span>2023</span></div>
+          <header class="study-card-heading">
+            <h2>Density-Based vs. Centroid-Based Clustering</h2>
+            <p>A comparative study of two approaches to finding groups in real datasets.</p>
+          </header>
+          <div class="study-facts">
+            <div><span>DEGREE</span><strong>BSc in Data Analytics</strong></div>
+            <div><span>COMPARISON</span><strong>Density-based and centroid-based methods</strong></div>
+            <div><span>APPLICATION</span><strong>Real datasets</strong></div>
+          </div>
+          <div class="study-columns">
+            <section>
+              <h3>Thesis scope</h3>
+              <p>Samuel investigated density-based and centroid-based clustering methods and their application to real datasets. This page records the thesis scope described in the supplied English and Italian CVs.</p>
+            </section>
+            <section>
+              <h3>Methods in context</h3>
+              <p>Density-based methods form groups from local neighbourhood structure, while centroid-based methods assign observations around representative centres. The thesis is presented as a method comparison, not as a claim that one family always performs better.</p>
+            </section>
+          </div>
+          <aside class="study-caveat"><strong>Available detail</strong><p>The supplied CVs do not specify dataset names, evaluation metrics, or numerical findings for this thesis, so this summary does not invent them.</p></aside>
+          <div class="tag-list"><span>Clustering</span><span>Method comparison</span><span>Real datasets</span></div>
+        </article>
+      </div>
+
       <div class="study-list page-shell">
+        <div class="study-section-heading">
+          <p class="eyebrow">ASSIGNMENTS &amp; PROJECT REPORTS</p>
+          <h2>Five analyses,<br /><em>five different lenses.</em></h2>
+        </div>
         <article class="study-card" id="experimental-design">
-          <div class="study-card-index"><span>CASE STUDY 01</span><span>R · STATISTICAL METHODS</span></div>
+          <div class="study-card-index"><span>PROJECT REPORT 01</span><span>R · STATISTICAL METHODS</span></div>
           <header class="study-card-heading">
             <h2>Experimental Research Design</h2>
             <p>Choosing and interpreting tests for independent groups, paired observations, and multiple groups.</p>
@@ -88,7 +148,7 @@
         </article>
 
         <article class="study-card" id="functional-data">
-          <div class="study-card-index"><span>CASE STUDY 02</span><span>R · SIMULATION</span></div>
+          <div class="study-card-index"><span>PROJECT REPORT 02</span><span>R · SIMULATION</span></div>
           <header class="study-card-heading">
             <h2>Smoothing Simulated Functional Data</h2>
             <p>How does B-spline model complexity change the smoothness and error of noisy curves?</p>
@@ -127,7 +187,7 @@
         </article>
 
         <article class="study-card" id="memory-inference">
-          <div class="study-card-index"><span>CASE STUDY 03</span><span>2022 · R · BOOTSTRAP</span></div>
+          <div class="study-card-index"><span>PROJECT REPORT 03</span><span>2022 · R · BOOTSTRAP</span></div>
           <header class="study-card-heading">
             <h2>Memory-Test Data: Confidence Intervals and Tests</h2>
             <p>A resampling-focused analysis of a public dataset, with careful separation between dataset framing and real-world evidence.</p>
@@ -158,7 +218,7 @@
         </article>
 
         <article class="study-card" id="psychometrics">
-          <div class="study-card-index"><span>CASE STUDY 04</span><span>R · EXPLORATORY PSYCHOMETRICS</span></div>
+          <div class="study-card-index"><span>PROJECT REPORT 04</span><span>R · EXPLORATORY PSYCHOMETRICS</span></div>
           <header class="study-card-heading">
             <h2>Exploring Structure in Big Five Survey Items</h2>
             <p>Exploratory factor analysis of a set of 26 Likert-rated personality-survey items.</p>
@@ -186,7 +246,7 @@
         </article>
 
         <article class="study-card" id="superstore">
-          <div class="study-card-index"><span>CASE STUDY 05</span><span>R · EXPLORATORY DATA ANALYSIS</span></div>
+          <div class="study-card-index"><span>PROJECT REPORT 05</span><span>R · EXPLORATORY DATA ANALYSIS</span></div>
           <header class="study-card-heading">
             <h2>Superstore Sales, Shipping, and Profit</h2>
             <p>Visual exploration of transaction patterns across customer segments, product groups, and U.S. regions.</p>

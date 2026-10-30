@@ -10,6 +10,11 @@
 .study-index a:hover { border-color: var(--teal); color: var(--teal); }
 .study-index a span { color: var(--coral); font-family: var(--mono); font-size: 9px; }
 .study-list { padding-block: 22px 60px; }
+.study-section-label { margin: 3px 0 0; padding-bottom: 15px; border-bottom: 1px solid var(--line); }
+.study-section-heading { padding: 34px 0 21px; border-bottom: 1px solid var(--line); }
+.study-section-heading .eyebrow { margin-bottom: 13px; }
+.study-section-heading h2 { margin: 0; font-family: var(--display); font-size: clamp(36px, 5vw, 54px); font-weight: 400; letter-spacing: -.045em; line-height: .98; }
+.study-section-heading h2 em { color: var(--teal); font-weight: 400; }
 .study-card { padding: clamp(26px, 5vw, 62px) 0; border-bottom: 1px solid var(--line); scroll-margin-top: 104px; }
 .study-card-index { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 9px; color: var(--teal); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; }
 .study-card-heading { max-width: 840px; margin: 17px 0 26px; }
