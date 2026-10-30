@@ -1,5 +1,7 @@
 # Samuel Hinn Lionel Katam
 
+**Live portfolio:** [samuel-hinn-lionel-katam.vercel.app](https://samuel-hinn-lionel-katam.vercel.app/)
+
 **Data Scientist | Clustering & Predictive Modeling**  
 Caserta, Italy · [Email](mailto:lionelsamuelhinn@gmail.com) · [LinkedIn](https://www.linkedin.com/in/samuel-hinn-lionel-katam/) · CV: [English](cv/Samuel_Katam_Data_Scientist_EN.pdf) | [Italiano](cv/Samuel_Katam_Data_Scientist_IT.pdf)
 
