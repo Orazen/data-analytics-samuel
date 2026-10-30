@@ -34,6 +34,38 @@ Data Science MSc graduate with applied research experience in hierarchical clust
 
 Compared density-based and centroid-based clustering approaches and their applications to real datasets.
 
+### Experimental Research Design
+
+*Statistical methods coursework · R*
+
+Demonstrated the Wilcoxon rank-sum test, paired t-test, and one-way ANOVA with lung-capacity and memory-score examples. The report contains contradictory significance wording, so the [case study](projects.html#experimental-design) calls out the discrepancy and assumptions that need review.
+
+### Smoothing Simulated Functional Data
+
+*Simulation study · R · fda*
+
+Compared B-spline basis sizes on 80 simulated noisy sine curves sampled at 1,000 points. The [case study](projects.html#functional-data) explains the reported bias–variance trade-off and labels its schematic separately from measured project output.
+
+### Memory-Test Data: Confidence Intervals and Tests
+
+*2022 · R · bootstrap inference*
+
+Used bootstrap intervals and hypothesis tests on a 198-row Kaggle dataset. The [case study](projects.html#memory-inference) treats this as a secondary dataset analysis, not a verified clinical trial, and excludes row-level names from the website.
+
+### Exploring Structure in Big Five Survey Items
+
+*Exploratory psychometrics · R · psych*
+
+Explored 26 public personality-survey items with KMO and Bartlett diagnostics, parallel analysis, PCA, and rotated factor solutions. The [case study](projects.html#psychometrics) describes the result as exploratory rather than a validated scale.
+
+### Superstore Sales, Shipping, and Profit
+
+*Exploratory data analysis · R*
+
+Visualized 9,994 sample transactions across customer, regional, shipping, and product dimensions. The [case study](projects.html#superstore) identifies report-reported summary statistics and notes they have not been independently recalculated.
+
+Additional methods and scope notes for these projects are available in the [project case studies](projects.html). The HTML source exports were reviewed statically; their embedded scripts and row-level records were not republished.
+
 ## Experience
 
 ### Data Science Workshop Facilitator · Coding Girls

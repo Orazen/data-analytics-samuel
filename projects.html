@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f1e9" />
+    <meta name="description" content="Research and analytics case studies by Samuel Hinn Lionel Katam, covering statistical inference, functional data, psychometrics, and retail data." />
+    <meta property="og:title" content="Project Case Studies — Samuel Hinn Lionel Katam" />
+    <meta property="og:description" content="Methods, results, and scope notes from five data analysis projects." />
+    <meta property="og:type" content="website" />
+    <title>Project Case Studies — Samuel Hinn Lionel Katam</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/projects.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Samuel Katam, home">
+        <span class="brand-mark" aria-hidden="true">SK<span>·</span></span>
+        <span class="brand-caption">DATA SCIENCE<br />PORTFOLIO</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="/#about">About</a>
+        <a href="/#projects" aria-current="page">Portfolio projects</a>
+        <a href="/#education">Education</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a class="header-link" href="mailto:lionelsamuelhinn@gmail.com">Let’s connect <span aria-hidden="true">↗</span></a>
+      <details class="mobile-nav">
+        <summary aria-label="Open navigation menu"><span></span><span></span></summary>
+        <nav aria-label="Mobile navigation">
+          <a href="/#about">About</a>
+          <a href="/#projects">Portfolio projects</a>
+          <a href="/#education">Education</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </details>
+    </header>
+
+    <main id="main">
+      <section class="study-intro page-shell" aria-labelledby="page-title">
+        <a class="study-back" href="/#projects"><span aria-hidden="true">←</span> BACK TO PORTFOLIO</a>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> PROJECT NOTES <span class="eyebrow-separator">/</span> METHODS &amp; EVIDENCE</p>
+        <h1 id="page-title">Five questions.<br /><em>Five ways into the data.</em></h1>
+        <p class="study-intro-copy">Case studies from statistical coursework and exploratory analysis. Each summary describes what the supplied report shows and where its conclusions need care.</p>
+        <nav class="study-index" aria-label="Project case studies">
+          <a href="#experimental-design"><span>01</span> Experimental design</a>
+          <a href="#functional-data"><span>02</span> Functional data</a>
+          <a href="#memory-inference"><span>03</span> Bootstrap inference</a>
+          <a href="#psychometrics"><span>04</span> Psychometrics</a>
+          <a href="#superstore"><span>05</span> Superstore analysis</a>
+        </nav>
+      </section>
+
+      <div class="study-list page-shell">
+        <article class="study-card" id="experimental-design">
+          <div class="study-card-index"><span>CASE STUDY 01</span><span>R · STATISTICAL METHODS</span></div>
+          <header class="study-card-heading">
+            <h2>Experimental Research Design</h2>
+            <p>Choosing and interpreting tests for independent groups, paired observations, and multiple groups.</p>
+          </header>
+          <div class="study-facts">
+            <div><span>DATA</span><strong>Lung capacity and memory-score examples</strong></div>
+            <div><span>METHODS</span><strong>Wilcoxon rank-sum · paired t-test · one-way ANOVA</strong></div>
+            <div><span>FORMAT</span><strong>Coursework report</strong></div>
+          </div>
+          <div class="study-columns">
+            <section>
+              <h3>Question and approach</h3>
+              <p>The report demonstrates how the test follows the study design: an independent-group rank test for smoker and non-smoker lung-capacity observations, a paired t-test for memory scores measured before and after a drug, and ANOVA for comparisons across several groups.</p>
+              <p>It includes visual checks and normality checks before testing. The examples are useful for discussing assumptions and test selection, rather than for making clinical claims.</p>
+            </section>
+            <section>
+              <h3>Results recorded in the report</h3>
+              <ul class="study-results">
+                <li><span>Wilcoxon rank-sum</span><strong>p = 0.00554</strong><small>Reported location shift −0.80; 95% CI [−1.40, −0.25].</small></li>
+                <li><span>Paired t-test</span><strong>p = 0.0001504</strong><small>Reported mean difference −2.95; 95% CI [−4.46, −1.45].</small></li>
+                <li><span>One-way ANOVA</span><strong>p &lt; 0.05</strong><small>The report does not give enough detail here to summarize pairwise differences.</small></li>
+              </ul>
+            </section>
+          </div>
+          <aside class="study-caveat"><strong>Interpretation note</strong><p>The narrative calls some results “not statistically significant” even where the displayed p-values are below 0.05 and the report says to reject the null. Normality checks also fail for some groups. The written conclusion needs correction, and the paired-test assumptions should be checked on the within-person differences before treating the result as definitive.</p></aside>
+          <div class="tag-list"><span>Hypothesis testing</span><span>Assumption checks</span><span>Effect intervals</span></div>
+        </article>
+
+        <article class="study-card" id="functional-data">
+          <div class="study-card-index"><span>CASE STUDY 02</span><span>R · SIMULATION</span></div>
+          <header class="study-card-heading">
+            <h2>Smoothing Simulated Functional Data</h2>
+            <p>How does B-spline model complexity change the smoothness and error of noisy curves?</p>
+          </header>
+          <div class="study-facts">
+            <div><span>DATA</span><strong>80 simulated curves · 1,000 points each</strong></div>
+            <div><span>METHOD</span><strong>B-spline basis smoothing</strong></div>
+            <div><span>TOOLS</span><strong>R · fda</strong></div>
+          </div>
+          <div class="study-columns">
+            <section>
+              <h3>Design</h3>
+              <p>The project generates noisy sine curves on a 1,000-point grid from 0 to 2π, then fits smooth functions using B-spline bases. It compares 5, 50, and 200 knots and also searches basis sizes from 150 to 400.</p>
+              <p>The report tracks mean squared error and discusses bias and variance for noisy and noise-free curves. Because the curves are simulated, the results illustrate a method rather than describe an observed population.</p>
+            </section>
+            <section>
+              <h3>What the report observes</h3>
+              <div class="tradeoff-figure">
+                <svg viewBox="0 0 440 150" role="img" aria-labelledby="tradeoff-title tradeoff-desc">
+                  <title id="tradeoff-title">Conceptual bias and variance trade-off</title>
+                  <desc id="tradeoff-desc">A schematic only: as model complexity increases, bias tends to decrease and variance tends to increase. These curves are not measured project values.</desc>
+                  <path d="M42 15V120H420" fill="none" stroke="#91a9a0" stroke-opacity=".6" />
+                  <path d="M43 42H420M43 78H420" stroke="#91a9a0" stroke-opacity=".18" />
+                  <path d="M56 25C120 40 180 72 240 87S347 102 405 106" fill="none" stroke="#f0a07a" stroke-width="2.5" />
+                  <path d="M56 107C130 100 174 87 234 65S344 35 405 22" fill="none" stroke="#9bdac4" stroke-width="2.5" />
+                  <text x="43" y="140" fill="#cad8d0" font-size="9" font-family="monospace">LOW COMPLEXITY</text>
+                  <text x="336" y="140" fill="#cad8d0" font-size="9" font-family="monospace">HIGH</text>
+                </svg>
+                <div class="tradeoff-legend"><span><i class="legend-bias"></i> Bias (conceptual)</span><span><i class="legend-variance"></i> Variance (conceptual)</span></div>
+                <small>SCHEMATIC · NOT MEASURED PROJECT VALUES</small>
+              </div>
+              <p>The report describes lower smoothing bias and higher variance as the number of knots increases. It frames basis-size selection as a trade-off; the supplied narrative does not provide a single audited numeric optimum to publish.</p>
+            </section>
+          </div>
+          <div class="tag-list"><span>Functional data</span><span>B-splines</span><span>MSE</span><span>Bias–variance trade-off</span></div>
+        </article>
+
+        <article class="study-card" id="memory-inference">
+          <div class="study-card-index"><span>CASE STUDY 03</span><span>2022 · R · BOOTSTRAP</span></div>
+          <header class="study-card-heading">
+            <h2>Memory-Test Data: Confidence Intervals and Tests</h2>
+            <p>A resampling-focused analysis of a public dataset, with careful separation between dataset framing and real-world evidence.</p>
+          </header>
+          <div class="study-facts">
+            <div><span>DATA</span><strong>198 rows · 9 columns</strong></div>
+            <div><span>METHODS</span><strong>Bootstrap intervals and hypothesis tests</strong></div>
+            <div><span>DATE</span><strong>31 March 2022 report</strong></div>
+          </div>
+          <div class="study-columns">
+            <section>
+              <h3>Data and methods</h3>
+              <p>The report analyzes the Kaggle “Memory Test on Drugged Islanders” dataset. It builds bootstrap distributions and intervals for quantities including means, medians, standard deviations, proportions, and group differences, then compares bootstrap and classical tests.</p>
+              <p>The source uses fictionalized treatment and participant framing. This portfolio describes it as a secondary analysis of a public dataset, not as a verified or real clinical trial.</p>
+              <a class="inline-link" href="https://www.kaggle.com/steveahn/memory-test-on-drugged-islanders-data" target="_blank" rel="noreferrer">Open the Kaggle dataset <span aria-hidden="true">↗</span></a>
+            </section>
+            <section>
+              <h3>Selected reported outcomes</h3>
+              <ul class="study-results">
+                <li><span>Sad-group proportion vs. 30% benchmark</span><strong>50% · p ≈ 1.33 × 10⁻⁹</strong><small>Reported 95% interval: [0.429, 0.571].</small></li>
+                <li><span>Happy vs. sad group means</span><strong>p = 0.912</strong><small>No difference was detected by the reported test.</small></li>
+                <li><span>Paired comparison</span><strong>p = 0.979</strong><small>No difference was detected by the reported test.</small></li>
+              </ul>
+            </section>
+          </div>
+          <aside class="study-caveat"><strong>Scope and privacy</strong><p>These are associations and tests reported for a downloaded dataset; they do not establish a medication effect. The original report contains participant name fields, which are not reproduced on this site.</p></aside>
+          <div class="tag-list"><span>Bootstrap</span><span>Confidence intervals</span><span>Proportions</span><span>Group comparison</span></div>
+        </article>
+
+        <article class="study-card" id="psychometrics">
+          <div class="study-card-index"><span>CASE STUDY 04</span><span>R · EXPLORATORY PSYCHOMETRICS</span></div>
+          <header class="study-card-heading">
+            <h2>Exploring Structure in Big Five Survey Items</h2>
+            <p>Exploratory factor analysis of a set of 26 Likert-rated personality-survey items.</p>
+          </header>
+          <div class="study-facts">
+            <div><span>DATA</span><strong>Online survey · April–June 2019</strong></div>
+            <div><span>ITEMS</span><strong>26 Likert-rated questions</strong></div>
+            <div><span>TOOLS</span><strong>R · psych · corrplot</strong></div>
+          </div>
+          <div class="study-columns">
+            <section>
+              <h3>Workflow</h3>
+              <p>The analysis checks item distributions and factorability, calculates KMO and Bartlett statistics, and uses PCA and parallel analysis to guide the number of dimensions. It then compares rotated principal-component and principal-axis solutions.</p>
+              <p>The public survey asks respondents to take a Big Five personality test online; the sample is self-selected rather than a probability sample.</p>
+              <a class="inline-link" href="https://openpsychometrics.org/_rawdata/" target="_blank" rel="noreferrer">Open the OpenPsychometrics data page <span aria-hidden="true">↗</span></a>
+            </section>
+            <section>
+              <h3>Reported diagnostics</h3>
+              <div class="diagnostic-pair"><div><span>OVERALL KMO</span><strong>0.87</strong><small>Reported measure of sampling adequacy</small></div><div><span>PARALLEL ANALYSIS</span><strong>9 / 7</strong><small>9 factors and 7 components, as reported</small></div></div>
+              <p>The project explores several plausible representations instead of confirming a fixed, validated questionnaire structure.</p>
+            </section>
+          </div>
+          <aside class="study-caveat"><strong>Interpretation note</strong><p>Factor counts can depend on the selection rule, item treatment, and extraction method. The results are exploratory and should not be described as proof that the survey measures nine validated traits.</p></aside>
+          <div class="tag-list"><span>KMO</span><span>Bartlett test</span><span>Parallel analysis</span><span>PCA</span><span>Factor rotation</span></div>
+        </article>
+
+        <article class="study-card" id="superstore">
+          <div class="study-card-index"><span>CASE STUDY 05</span><span>R · EXPLORATORY DATA ANALYSIS</span></div>
+          <header class="study-card-heading">
+            <h2>Superstore Sales, Shipping, and Profit</h2>
+            <p>Visual exploration of transaction patterns across customer segments, product groups, and U.S. regions.</p>
+          </header>
+          <div class="study-facts">
+            <div><span>DATA</span><strong>9,994 sample transactions</strong></div>
+            <div><span>FIELDS</span><strong>Sales · quantity · discount · profit</strong></div>
+            <div><span>TOOLS</span><strong>R · data visualisation</strong></div>
+          </div>
+          <div class="study-columns">
+            <section>
+              <h3>Questions explored</h3>
+              <p>The report compares transaction counts by customer segment, shipping mode, and region; visualizes sales across product categories and subcategories; and examines the distributions and relationships of numeric fields.</p>
+              <p>The source dataset describes sample Superstore orders in the United States. It is an exploratory exercise and does not establish causal effects of discounting, shipping, or product mix.</p>
+              <a class="inline-link" href="https://www.kaggle.com/bravehart101/sample-supermarket-dataset" target="_blank" rel="noreferrer">Open the Kaggle dataset <span aria-hidden="true">↗</span></a>
+            </section>
+            <section>
+              <h3>Descriptive statistics in the report</h3>
+              <dl class="metric-list">
+                <div><dt>Sales</dt><dd>Median $54.49 <span>·</span> Mean $229.80</dd></div>
+                <div><dt>Discount</dt><dd>Median 0.20 <span>·</span> Mean 0.15</dd></div>
+                <div><dt>Quantity</dt><dd>Median 3 <span>·</span> Mean 3.7</dd></div>
+                <div><dt>Profit</dt><dd>Median $8.60 <span>·</span> Mean $28.65</dd></div>
+              </dl>
+            </section>
+          </div>
+          <aside class="study-caveat"><strong>Data note</strong><p>Values above are transcribed from the supplied report and have not been independently recalculated here. The report also contains conflicting category-level interpretations, so this summary sticks to dataset scope, visual comparisons, and reported descriptive statistics.</p></aside>
+          <div class="tag-list"><span>Exploratory analysis</span><span>Retail</span><span>Segmentation</span><span>Visualisation</span></div>
+        </article>
+      </div>
+
+      <section class="study-end page-shell">
+        <div><p class="eyebrow">MORE ABOUT SAMUEL</p><h2>Research starts<br /><em>with a clear question.</em></h2></div>
+        <div><p>See the rest of my background, education, and contact details on the portfolio homepage.</p><a class="button button-primary" href="/#projects">Return to portfolio <span aria-hidden="true">↗</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-shell">
+      <a class="footer-brand" href="/">SAMUEL HINN LIONEL KATAM <span>·</span> DATA SCIENCE</a>
+      <span>© 2026 · PORTFOLIO</span>
+      <a href="#main">BACK TO TOP ↑</a>
+    </footer>
+  </body>
+</html>
